@@ -305,17 +305,11 @@ class GeometryKingdom {
     updateUI() {
         document.getElementById('score').textContent = this.gameState.score;
         document.getElementById('playerLevel').textContent = Math.floor(this.gameState.exp / 100) + 1;
-        document.getElementById('currentLevel').textContent = this.currentLevel.id;
-        document.getElementById('totalLevels').textContent = this.levels.length;
         document.getElementById('currentMission').textContent = this.currentLevel.description;
         
         // Update lives display
         const livesContainer = document.querySelector('.lives');
         livesContainer.innerHTML = Array(this.gameState.lives).fill('<i class="fas fa-heart"></i>').join('');
-        
-        // Update progress bar
-        const progress = (this.currentLevel.id - 1) / this.levels.length * 100;
-        document.getElementById('levelProgress').style.width = `${progress}%`;
     }
 
     // Geometry validation methods
@@ -393,7 +387,7 @@ class GeometryKingdom {
             {
                 id: 'first_shape',
                 name: '初次创作',
-                description: '完成第一个四边形',
+                description: '完成第一个四���形',
                 condition: () => this.gameState.score > 0
             },
             {

@@ -261,33 +261,6 @@ body {
     color: white;
 }
 
-/* Footer */
-.game-footer {
-    background: white;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.progress-bar {
-    flex-grow: 1;
-    height: 20px;
-    background: var(--background-color);
-    border-radius: 10px;
-    margin-right: 20px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: var(--primary-color);
-    width: 0%;
-    transition: width 0.3s ease;
-}
-
 /* Dialog Styles */
 .dialog {
     position: fixed;
